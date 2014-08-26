@@ -68,10 +68,10 @@ function Get-TargetResource
    $getTargetResourceResult = @{}
    
    Write-Verbose "GET: Get Generic Settings for Firewall"
-   $getTargetResourceResult.FirewallSettings = Get-NetFirewallSetting -All
+   #$getTargetResourceResult.FirewallSettings = Get-NetFirewallSetting -All
    
    Write-Verbose "GET: Get Rules for the specified Name[$Name] and DisplayGroup[$DisplayGroup]"
-   #$firewallRules = Get-FirewallRules -Name $Name -DisplayGroup $DisplayGroup
+   $firewallRules = Get-FirewallRules -Name $Name -DisplayGroup $DisplayGroup
    
    if ($firewallRules.Count -eq 0)
    {        
