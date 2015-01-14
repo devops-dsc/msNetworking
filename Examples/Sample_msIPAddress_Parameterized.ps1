@@ -1,4 +1,4 @@
-﻿configuration Sample_xIPAddress_Parameterized
+configuration Sample_msIPAddress_Parameterized
 {
     param
     (
@@ -20,11 +20,11 @@
         [string]$AddressFamily = 'IPv4'
     )
 
-    Import-DscResource -Module xNetworking
+    Import-DscResource -Module msNetworking
 
     Node $NodeName
     {
-        xIPAddress NewIPAddress
+        msIPAddress NewIPAddress
         {
             IPAddress      = $IPAddress
             InterfaceAlias = $InterfaceAlias

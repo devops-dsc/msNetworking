@@ -1,15 +1,15 @@
-configuration Sample_xIPAddress_FixedValue
+configuration Sample_msIPAddress_FixedValue
 {
     param
     (
         [string[]]$NodeName = 'localhost'
     )
 
-    Import-DscResource -Module xNetworking
+    Import-DscResource -Module msNetworking
 
     Node $NodeName
     {
-        xIPAddress NewIPAddress
+        msIPAddress NewIPAddress
         {
             IPAddress      = "2001:4898:200:7:6c71:a102:ebd8:f482"
             InterfaceAlias = "Ethernet"

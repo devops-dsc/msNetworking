@@ -1,5 +1,5 @@
-[ClassVersion("1.0.0"), FriendlyName("xIPAddress")] 
-class MSFT_xIPAddress : OMI_BaseResource
+[ClassVersion("1.0.0"), FriendlyName("msIPAddress")] 
+class MSFT_msIPAddress : OMI_BaseResource
 {
   [Key] string IPAddress;
   [Key] string InterfaceAlias;

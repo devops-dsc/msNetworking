@@ -1,17 +1,17 @@
-﻿# DSC configuration for Firewall
+# DSC configuration for Firewall
 
-configuration Sample_xFirewall_AddFirewallRuleToNewGroup
+configuration Sample_msFirewall_AddFirewallRuleToNewGroup
 {
     param 
     (
         [string[]]$NodeName = 'localhost'
     )
 
-    Import-DSCResource -ModuleName xNetworking
+    Import-DSCResource -ModuleName msNetworking
 
     Node $NodeName
     {
-        xFirewall Firewall
+        msFirewall Firewall
         {
             Name                  = "MyAppFirewallRule"            
             ApplicationPath       = "c:\windows\system32\MyApp.exe"
