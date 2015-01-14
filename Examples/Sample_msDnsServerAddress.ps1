@@ -1,4 +1,4 @@
-configuration Sample_xDnsServerAddress
+configuration Sample_msDnsServerAddress
 {
     param
     (
@@ -14,11 +14,11 @@ configuration Sample_xDnsServerAddress
         [string]$AddressFamily = 'IPv4'
     )
 
-    Import-DscResource -Module xNetworking
+    Import-DscResource -Module msNetworking
 
     Node $NodeName
     {
-        xDnsServerAddress DnsServerAddress
+        msDnsServerAddress DnsServerAddress
         {
             Address        = $DnsServerAddress
             InterfaceAlias = $InterfaceAlias

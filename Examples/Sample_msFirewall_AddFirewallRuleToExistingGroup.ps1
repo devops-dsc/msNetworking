@@ -1,18 +1,18 @@
-﻿# DSC configuration for Firewall
+# DSC configuration for Firewall
 # 
 
-configuration Sample_xFirewall_AddFirewallRuleToExistingGroup
+configuration Sample_msFirewall_AddFirewallRuleToExistingGroup
 {
     param 
     (
         [string[]]$NodeName = 'localhost'
     )
 
-    Import-DSCResource -ModuleName xNetworking
+    Import-DSCResource -ModuleName msNetworking
 
     Node $NodeName
     {
-        xFirewall Firewall
+        msFirewall Firewall
         {
             Name                  = "MyFirewallRule"
             DisplayName           = "My Firewall Rule"
@@ -20,7 +20,7 @@ configuration Sample_xFirewall_AddFirewallRuleToExistingGroup
 	        Access                = "Allow"
         }
 
-        xFirewall Firewall1
+        msFirewall Firewall1
         {
             Name                  = "MyFirewallRule1"
             DisplayName           = "My Firewall Rule"
